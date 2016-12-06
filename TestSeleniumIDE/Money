@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///home/m2eserv/vasseur/Documents/M2_TAC-OTI/TP_JS/src/index.html" />
+<title>Money</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Money</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///home/m2eserv/vasseur/Documents/M2_TAC-OTI/TP_JS/src/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=v1</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c1</td>
+	<td>EUR</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=v2</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c2</td>
+	<td>EUR</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=res</td>
+	<td>Result : 24 (EUR)</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
