@@ -1,0 +1,21 @@
+Consignes :
+
+[prof] 
+
+vos sources .js et vos tests .js + tests Selenium IDE ou WebDriver + sonar sur votre projet avant/après + rapport
+
+[mail]
+
+Comme promis, voici les éléments requis pour le rendu OTI - WebAv, AngularJS ou toute autre projet JS :
+a) sources de votre projet JS
+b) tests de votre projet JS : tests QUnit métier et interfaces - traitant des assertions simples, des levées des exceptions, des alertes, ainsi que des tests Selenium (IDE ou en WebDriver).
+c) fichiers de configuration sonar / karma ou grunt
+d) captures d’écrans sonar au début et à la fin du processus - incluant également des informations sur la couverture des tests QUnit
+e) sonar.h2.db (sonarqube/data) ou dump mysql
+f) rapport retraçant les tests que vous avez écrit (notamment comment vous avez décidez de repartir les tests entre QUnit et Selenium), les difficultés que vous avez rencontré pour la mise en place de tests, éventuels améliorations apportées au code, qu’en pensez-vous des apports de tests et! de leur mise en place
+g) la date de rendu est fixée au 16 décembre au soir 20h sur PROF.
+
+Je reste à votre disposition pour des précisions si nécessaire.
+
+J’accepte des questions de votre part concernant ce rendu, jusqu’au 12 décembre au soir.
+
