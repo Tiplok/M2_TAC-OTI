@@ -12,7 +12,7 @@ function ValueInfZeroExc(_v1){
 }
 
 ValueInfZeroExc.prototype.toString=function (){
-		return "Valeur infÃ©rieur Ã  0 : "+this.v1;
+		return "Valeur inférieur à 0 : "+this.v1;
 };
 
 function DeviseSupTroisCarExc(_d1){
@@ -20,7 +20,7 @@ function DeviseSupTroisCarExc(_d1){
 }
 
 DeviseSupTroisCarExc.prototype.toString=function (){
-		return "Devise supÃ©rieur Ã  3 caractÃ¨res : "+this.d1;
+		return "Devise supérieur à 3 caractères : "+this.d1;
 };
 
 function SoustractionInfZeroExc(_v1, _v2){
@@ -28,5 +28,5 @@ function SoustractionInfZeroExc(_v1, _v2){
 }
 
 SoustractionInfZeroExc.prototype.toString=function (){
-		return "Soustraction infÃ©rieur Ã  0 : "+this.v1+"-"+this.v2;
+		return "Soustraction inférieur à 0 : "+this.v1+"-"+this.v2;
 };

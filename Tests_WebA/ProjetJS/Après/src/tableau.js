@@ -1,18 +1,39 @@
-/**
- * Created by lepallex on 19/10/2016.
- */
-
 function nombreAuHasard(max) {
     if (max == 0) return 0;
     return Math.floor((Math.random() * max) + 1)
 }
 
 function Tableau(parameters) {
-    this.conteneurHTML = parameters.conteneurHTML;
-    this.nbColonnes = parameters.nbColonnes;
-    this.nbLignes = parameters.nbLignes;
-    this.styleTable = parameters.styleTable;
-    this.styleCellule = parameters.styleCellule;
+    if(!(parameters.conteneurHTML instanceof HTMLElement)){
+      throw new ParametreInvalideExc(parameters.conteneurHTML);
+    } else {
+      this.conteneurHTML = parameters.conteneurHTML;
+    }
+
+    if(isNaN(parameters.nbColonnes)){
+      throw new ParametreInvalideExc(parameters.nbColonnes);
+    } else {
+      this.nbColonnes = parameters.nbColonnes;
+    }
+
+    if(isNaN(parameters.nbLignes)){
+      throw new ParametreInvalideExc(parameters.nbLignes);
+    } else {
+      this.nbLignes = parameters.nbLignes;
+    }
+
+    if(!(parameters.styleTable instanceof Object)){
+      throw new ParametreInvalideExc(parameters.styleTable);
+    } else {
+      this.styleTable = parameters.styleTable;
+    }
+
+    if(!(parameters.styleCellule instanceof Object)){
+      throw new ParametreInvalideExc(parameters.styleCellule);
+    } else {
+      this.styleCellule = parameters.styleCellule;
+    }
+
     this.construireLeTableau();
 
 }
@@ -121,6 +142,7 @@ CelluleAvecEntier.prototype = new Cellule();
 CelluleAvecEntier.prototype.construireLaCellule = function () {
     Cellule.prototype.construireLaCellule.call(this);
     this.texte = "1";
+    this.balise.className = "cell1";
 }
 
 CelluleAvecEntier.prototype.handleEvent = function (evenement) {
@@ -138,6 +160,11 @@ function CelluleAvecPrompt(parameters) {
 }
 
 CelluleAvecPrompt.prototype = new Cellule();
+
+CelluleAvecPrompt.prototype.construireLaCellule = function () {
+    Cellule.prototype.construireLaCellule.call(this);
+    this.balise.className = "cell2";
+}
 
 CelluleAvecPrompt.prototype.handleEvent = function (evenement) {
     var nouveauContenu = prompt("contenu de la cellule", this.texte);
@@ -161,6 +188,7 @@ CelluleColoree.prototype = new Cellule();
 CelluleColoree.prototype.construireLaCellule = function () {
     Cellule.prototype.construireLaCellule.call(this);
     this.fixerCouleur();
+    this.balise.className = "cell3";
 }
 
 CelluleColoree.prototype.handleEvent = function (evenement) {
